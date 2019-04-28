@@ -115,37 +115,34 @@ class FMC(object):
         msg = self.fromMorse(mcmsg)
         return msg
 
-f = FMC()
-for k in f.MorseCode:
-    print("MorseCode.set('{}', '{}');".format(k, f.MorseCode[k]))
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
 
-#     keyphrase = ""
-#     assert len(sys.argv) in [2, 4]
-#     if len(sys.argv) == 2:
-#         assert sys.argv[1] in ['-e', '-d'], "Usage: python3 main.py [-k keyphrase] -e|-d"
-#         mode = sys.argv[1]
-#     else:
-#         assert sys.argv[1] == '-k', "Usage: python3 main.py [-k keyphrase] -e|-d"
-#         assert sys.argv[3] in ['-e', '-d'], "Usage: python3 main.py [-k keyphrase] -e|-d"
-#         keyphrase = sys.argv[2]
-#         mode = sys.argv[3]
+    keyphrase = ""
+    assert len(sys.argv) in [2, 4]
+    if len(sys.argv) == 2:
+        assert sys.argv[1] in ['-e', '-d'], "Usage: python3 main.py [-k keyphrase] -e|-d"
+        mode = sys.argv[1]
+    else:
+        assert sys.argv[1] == '-k', "Usage: python3 main.py [-k keyphrase] -e|-d"
+        assert sys.argv[3] in ['-e', '-d'], "Usage: python3 main.py [-k keyphrase] -e|-d"
+        keyphrase = sys.argv[2]
+        mode = sys.argv[3]
     
-#     msg = ''
-#     while True:
-#         char = sys.stdin.read(1)
-#         if not char:
-#             break
-#         else:
-#             msg += char
+    msg = ''
+    while True:
+        char = sys.stdin.read(1)
+        if not char:
+            break
+        else:
+            msg += char
 
-#     f = FMC()
-#     if mode == '-e':
-#         # encryption
-#         r = f.FMCEncrypt(msg, keyphrase)
-#     else:
-#         # decryption
-#         r = f.FMCDecrypt(msg, keyphrase)
+    f = FMC()
+    if mode == '-e':
+        # encryption
+        r = f.FMCEncrypt(msg, keyphrase)
+    else:
+        # decryption
+        r = f.FMCDecrypt(msg, keyphrase)
     
-#     print(r)
+    print(r)

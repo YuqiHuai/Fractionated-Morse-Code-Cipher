@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      MorseCode Cipher
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="flex-grow: 1;">
+      <ion-col size="12">
+        <ion-textarea id='msg' placeholder='Text to encrypt' [(ngModel)]='msg'></ion-textarea>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2">
+        <p>
+          Key: 
+        </p>
+      </ion-col>
+      <ion-col size="10">
+        <ion-input id='keyphrase' placeholder='keyphrase' [(ngModel)]='keyphrase'></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand='full' color='dark' (click)="encrypt()">
+          <ion-icon name="arrow-dropdown-circle"></ion-icon>
+          Encrypt
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand='full' color='medium' (click)="decrypt()">
+          <ion-icon name="arrow-dropup-circle"></ion-icon>
+          Decrypt
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col size="12">
+        <ion-textarea id='emsg' placeholder='Text to decrypt' [(ngModel)]='emsg'></ion-textarea>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,22 @@
+ion-grid {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+ion-icon {
+    margin-right: 10px;
+}
+
+#emsg, #msg, #keyphrase {
+    height: 100%;
+    border: 1px black solid;
+    --padding-start: 10px;
+}
+
+ion-label {
+    margin-top: 15px;
+}
+
+
+
