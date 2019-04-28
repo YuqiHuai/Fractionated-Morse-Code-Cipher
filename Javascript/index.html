@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./fmc.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fractionated MorseCode Cipher</h1>
+        <form onsubmit="return validate()">
+            <textarea name="msg" id="msg"></textarea>
+            <div class="actions">
+
+                <div class="input-group">
+                    <label for="keyphrase">Keyphrase</label>
+                    <input type="text" id="keyphrase" name="keyphrase">
+                </div>
+
+                <a class="button" onclick="encrypt()">Encrypt</a>
+                <a class="button" onclick="decrypt()">Decrypt</a>
+            </div>
+            <textarea name="emsg" id="emsg"></textarea>
+        </form>
+    </div>
+</body>
+</html>
